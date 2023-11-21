@@ -1,0 +1,49 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
+
+body {
+    height: 100vh;
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+}
+
+.form {
+    border-radius: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 91vh;
+    border: 1px solid #ced4da;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.2);
+}
+
+form {
+    width: 100%;
+}
+
+.btn-dark {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 85vh;
+}
+
+
+#alert {
+    position: absolute;
+    width: 100%;
+    height: 7vh;
+    opacity: 95%;
+    padding: 5px;
+    z-index: 99;
+}
+
+img {
+    margin: 0 auto;
+    height: 30%;
+    width: auto;
+}

@@ -1,0 +1,36 @@
+{% extends 'layout.html'%}
+{% block content %}
+<body class="text-center">
+    <div class="container content-section">
+        <form action="" method="post">
+            {{ form.csrf_token()}}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Add Stock</legend>
+                <div class="form-group">
+                    {{ form.name.label(class="form-control-label")}}
+                    {{ form.name(class="form-control form-control-lg")}}
+                </div>
+                <div class="form-group">
+                    {{ form.barcode.label(class="form-control-label")}}
+                    {{ form.barcode(class="form-control form-control-lg")}}
+                </div>
+                <div class="form-group">
+                    {{ form.price.label(class="form-control-label")}}
+                    {{ form.price(class="form-control form-control-lg")}}
+                </div>
+                <div class="form-group">
+                    {{ form.description.label(class="form-control-label")}}
+                    {{ form.description(class="form-control form-control-lg")}}
+                </div>
+                <div class="form-group">
+                    {{ form.imageUrl.label(class="form-control-label")}}
+                    {{ form.imageUrl(class="form-control form-control-lg")}}
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-outline btn-lg btn-danger">Add Item</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</body>
+{% endblock content%}

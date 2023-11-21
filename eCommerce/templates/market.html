@@ -1,0 +1,32 @@
+{% extends 'layout.html'%}
+{% block activem %} 
+active
+{% endblock activem %}
+{% block title%}
+    ECart - Market
+{% endblock title%}
+{% block content %}
+<div class="container">
+    <div class="row">
+        {% for item in items%}
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="{{item.imageUrl}}" alt="Product 1" loading="lazy">
+                    <h4>{{item.name}}</h4>
+                    <p>{{item.desription}}</p>
+                    <p>Price:₹ {{item.price}}</p>
+                    <div class="mt-4">
+                        <!-- {{ url_for('add_to_cart', product_id='item._id')}} -->
+                    <a href="add_cart/{{item._id}}"><button class="btn btn-info">Add Cart</button></a>
+                    <button class="btn btn-success" data-toggle="modal" data-target="#exampleModal">Purchase</button>
+                </div>
+                </div>
+            </div>
+            {% include 'includes/modal.html' %}
+        {% endfor %}
+    </div>
+</div>
+{% endblock content%}
+{% block style%}
+<link rel="stylesheet" href="{{ url_for('static', filename='market.css') }}">
+{% endblock style%}

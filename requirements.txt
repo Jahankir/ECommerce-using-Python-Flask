@@ -1,0 +1,8 @@
+flask
+flask_pymongo
+flask_bcrypt
+bson
+functools
+flask_wtf
+wtforms
+email-validator
